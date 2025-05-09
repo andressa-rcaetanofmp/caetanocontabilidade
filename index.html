@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caetano | Serviços Contábeis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ebe5ce',
+                        secondary: '#ced1c0',
+                        accent: '#bad1c9',
+                        ruby: '#8c162a',
+                        darkruby: '#660022',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Barra de Navegação -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <!-- <div class="ruby-gem mr-4"></div> -->
+                    <span class="text-xl font-bold text-ruby">Caetano Assessoria</span>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-ruby font-medium">Início</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-ruby font-medium">Serviços</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-ruby font-medium">Quem somos</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-ruby font-medium">Contato</a>
+                </nav>
+                
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl text-ruby"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-pattern py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-darkruby mb-6">Excelência em Serviços Contábeis</h1>
+                <p class="text-lg text-gray-700 mb-8">Soluções personalizadas para sua empresa com a precisão e confiabilidade que você merece.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-ruby hover:bg-darkruby text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300">Agende uma Consulta</a>
+                    <a href="#services" class="border-2 border-ruby text-ruby hover:bg-ruby hover:text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300">Nossos Serviços</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-accent rounded-full flex items-center justify-center pulse">
+                        <!-- <i class="fas fa-calculator text-6xl text-ruby"></i> -->
+                        <img src="Logo.png" alt="Analise" class="w-full h-full object-cover rounded-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Stats Section -->
+    <section class="bg-ruby text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl font-bold mb-2">+<span id="clientCount">0</span></div>
+                    <p class="text-primary">Clientes Satisfeitos</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold mb-2">+<span id="yearCount">0</span></div>
+                    <p class="text-primary">Anos de Experiência</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold mb-2"><span id="serviceCount">0</span>+</div>
+                    <p class="text-primary">Serviços Especializados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Serviços -->
+    <section id="services" class="py-20 bg-primary">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-darkruby mb-4">Nossos Serviços</h2>
+                <div class="w-20 h-1 bg-ruby mx-auto"></div>
+                <p class="max-w-2xl mx-auto mt-4 text-gray-700">Oferecemos soluções contábeis completas para empresas de todos os portes, garantindo conformidade fiscal e saúde financeira.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Serviço 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden service-card transition duration-500">
+                    <div class="bg-ruby h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center mr-4">
+                                <i class="fas fa-file-invoice-dollar text-ruby text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-darkruby">Contabilidade Fiscal</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Gestão completa de obrigações fiscais, apuração de impostos e entrega de declarações dentro dos prazos legais.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-ruby mr-2"></i> Escrituração fiscal</li>
+                            <li class="flex items-center"><i class="fas fa-check text-ruby mr-2"></i> Apuração de impostos</li>
+                            <li class="flex items-center"><i class="fas fa-check text-ruby mr-2"></i> Planejamento tributário</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Serviço 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden service-card transition duration-500">
+                    <div class="bg-ruby h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-line text-ruby text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-darkruby">Contabilidade Gerencial</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Relatórios financeiros estratégicos para auxiliar na tomada de decisões e no crescimento do seu negócio.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-ruby mr-2"></i> DRE personalizado</li>
+                            <li class="flex items-center"><i class="fas fa-check text-ruby mr-2"></i> Fluxo de caixa</li>
+                            <li class="flex items-center"><i class="fas fa-check text-ruby mr-2"></i> Análise de indicadores</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden service-card transition duration-500">
+                    <div class="bg-ruby h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center mr-4">
+                                <i class="fas fa-users text-ruby text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-darkruby">Departamento Pessoal</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Gestão completa da folha de pagamento e obrigações trabalhistas, garantindo conformidade com a legislação.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-ruby mr-2"></i> Folha de pagamento</li>
+                            <li class="flex items-center"><i class="fas fa-check text-ruby mr-2"></i> E-Social</li>
+                            <li class="flex items-center"><i class="fas fa-check text-ruby mr-2"></i> FGTS e INSS</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Serviço 4 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden service-card transition duration-500">
+                    <div class="bg-ruby h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center mr-4">
+                                <i class="fas fa-hand-holding-usd text-ruby text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-darkruby">Abertura de Empresa</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Assessoria completa desde o planejamento inicial até a regularização da sua empresa junto aos órgãos competentes.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-ruby mr-2"></i> Consultoria jurídica</li>
+                            <li class="flex items-center"><i class="fas fa-check text-ruby mr-2"></i> Registro empresarial</li>
+                            <li class="flex items-center"><i class="fas fa-check text-ruby mr-2"></i> Enquadramento tributário</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Serviço 5 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden service-card transition duration-500">
+                    <div class="bg-ruby h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center mr-4">
+                                <i class="fas fa-balance-scale text-ruby text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-darkruby">Consultoria Tributária</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Análise e planejamento para redução legal da carga tributária, adequando-se ao melhor regime para seu negócio.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-ruby mr-2"></i> Análise de regimes</li>
+                            <li class="flex items-center"><i class="fas fa-check text-ruby mr-2"></i> Recuperação de créditos</li>
+                            <li class="flex items-center"><i class="fas fa-check text-ruby mr-2"></i> Pareceres fiscais</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Serviço 6 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden service-card transition duration-500">
+                    <div class="bg-ruby h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center mr-4">
+                                <i class="fas fa-laptop-code text-ruby text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-darkruby">Tecnologia Contábil</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Soluções digitais para gestão contábil com sistemas integrados e relatórios automatizados em tempo real.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-ruby mr-2"></i> Sistemas integrados</li>
+                            <li class="flex items-center"><i class="fas fa-check text-ruby mr-2"></i> Nuvem de documentos</li>
+                            <li class="flex items-center"><i class="fas fa-check text-ruby mr-2"></i> Dashboard personalizado</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="relative">
+                        <img src="mulher-de-tiro-medio-trabalhando-no-laptop.jpg" alt="Caetano Assessoria" class="rounded-lg shadow-xl w-full">
+                        <div class="absolute -bottom-6 -right-6 ruby-gem"></div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-darkruby mb-6">Quem somos</h2>
+                    <div class="w-20 h-1 bg-ruby mb-6"></div>
+                    <p class="text-gray-600 mb-4">Contadora formada pela Universidade Federal com especialização em Controladoria e Finanças. Pós-graduada em Direito Tributário e Perícia Contábil.</p>
+                    <p class="text-gray-600 mb-4">Com mais de 10 anos de experiência no mercado, atuando em empresas de diversos segmentos e portes, oferecendo soluções personalizadas e eficientes para cada cliente.</p>
+                    <p class="text-gray-600 mb-6">Membro ativa do CRC e participante frequente de congressos e atualizações na área contábil, garantindo que seus clientes estejam sempre em conformidade com as últimas mudanças legislativas.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-graduation-cap text-ruby mr-2"></i>
+                            <span class="text-gray-700">CRC Ativo</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-certificate text-ruby mr-2"></i>
+                            <span class="text-gray-700">Pós-graduada</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-trophy text-ruby mr-2"></i>
+                            <span class="text-gray-700">Prêmios</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-ruby mr-2"></i>
+                            <span class="text-gray-700">Equipe Qualificada</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="bg-ruby hover:bg-darkruby text-white font-bold py-3 px-6 rounded-lg inline-block transition duration-300">Entre em Contato</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Depoimentos -->
+    <section class="py-20 bg-secondary">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-darkruby mb-4">Depoimentos</h2>
+                <div class="w-20 h-1 bg-ruby mx-auto"></div>
+                <p class="max-w-2xl mx-auto mt-4 text-gray-700">O que nossos clientes dizem sobre nossos serviços</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-ruby font-bold mr-4">A</div>
+                        <div>
+                            <h4 class="font-bold text-darkruby">Ana Carolina</h4>
+                            <p class="text-gray-500 text-sm">Pequena Empresária</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"A Andressa transformou completamente minha relação com a contabilidade da minha empresa. Antes era um problema, hoje é uma solução que me ajuda a tomar decisões estratégicas."</p>
+                    <div class="mt-4 text-ruby">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-ruby font-bold mr-4">R</div>
+                        <div>
+                            <h4 class="font-bold text-darkruby">Ricardo Mendes</h4>
+                            <p class="text-gray-500 text-sm">Diretor Financeiro</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Profissionalismo e atenção aos detalhes são as marcas da Andressa. Nosso departamento financeiro nunca esteve tão organizado e em dia com as obrigações fiscais."</p>
+                    <div class="mt-4 text-ruby">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-ruby font-bold mr-4">M</div>
+                        <div>
+                            <h4 class="font-bold text-darkruby">Mariana Oliveira</h4>
+                            <p class="text-gray-500 text-sm">Empreendedora</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Quando abri minha empresa, não sabia por onde começar. A Andressa não só cuidou de toda a burocracia como continua me orientando em todas as decisões importantes."</p>
+                    <div class="mt-4 text-ruby">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contato -->
+    <section id="contact" class="py-20 bg-primary">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-darkruby mb-4">Entre em Contato</h2>
+                <div class="w-20 h-1 bg-ruby mx-auto"></div>
+                <p class="max-w-2xl mx-auto mt-4 text-gray-700">Estamos prontos para ajudar sua empresa a alcançar excelência contábil e financeira.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-darkruby mb-6">Envie uma Mensagem</h3>
+                        <form id="contactForm">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Nome</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-ruby">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-ruby">
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 mb-2">Telefone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-ruby">
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 mb-2">Mensagem</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-ruby"></textarea>
+                            </div>
+                            <button type="submit" class="bg-ruby hover:bg-darkruby text-white font-bold py-3 px-6 rounded-lg w-full transition duration-300">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-lg h-full">
+                        <h3 class="text-2xl font-bold text-darkruby mb-6">Informações de Contato</h3>
+                        
+                        <div class="mb-8">
+                            <h4 class="text-lg font-semibold text-darkruby mb-4">Horário de Atendimento</h4>
+                            <p class="text-gray-600 mb-2"><i class="fas fa-clock text-ruby mr-2"></i> Segunda a Sexta: 08:00 - 18:00</p>
+                            <p class="text-gray-600"><i class="fas fa-clock text-ruby mr-2"></i> Sábado: 09:00 - 12:00</p>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <h4 class="text-lg font-semibold text-darkruby mb-4">Contato Direto</h4>
+                            <p class="text-gray-600 mb-2"><i class="fas fa-phone-alt text-ruby mr-2"></i> (XX) XXXX-XXXX</p>
+                            <p class="text-gray-600 mb-2"><i class="fas fa-mobile-alt text-ruby mr-2"></i> (XX) XXXXX-XXXX</p>
+                            <p class="text-gray-600"><i class="fas fa-envelope text-ruby mr-2"></i> contato@andressacontabilidade.com.br</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-semibold text-darkruby mb-4">Endereço</h4>
+                            <p class="text-gray-600 mb-2"><i class="fas fa-map-marker-alt text-ruby mr-2"></i> Rua Exemplo, 123 - Centro</p>
+                            <p class="text-gray-600">Cidade/Estado - CEP: XXXXX-XXX</p>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="text-lg font-semibold text-darkruby mb-4">Redes Sociais</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-ruby hover:bg-ruby hover:text-white transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-ruby hover:bg-ruby hover:text-white transition duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-darkruby mb-4">Perguntas Frequentes</h2>
+                <div class="w-20 h-1 bg-ruby mx-auto"></div>
+                <p class="max-w-2xl mx-auto mt-4 text-gray-700">Tire suas dúvidas sobre nossos serviços contábeis</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-lg font-semibold text-darkruby">Qual o valor dos serviços contábeis?</h3>
+                        <i class="fas fa-chevron-down text-ruby transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        <p>O valor varia conforme o porte da empresa, regime tributário e complexidade das operações. Oferecemos um orçamento personalizado após análise detalhada das necessidades do cliente.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-lg font-semibold text-darkruby">Quais documentos preciso fornecer?</h3>
+                        <i class="fas fa-chevron-down text-ruby transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        <p>Basicamente precisamos de: notas fiscais de entrada e saída, extratos bancários, holerites dos funcionários, comprovantes de despesas e documentos societários. Fornecemos uma lista completa após o cadastro.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-lg font-semibold text-darkruby">Como é feito o atendimento?</h3>
+                        <i class="fas fa-chevron-down text-ruby transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        <p>Trabalhamos com atendimento presencial, por telefone, e-mail e videoconferência. Também disponibilizamos um portal do cliente com acesso 24h a relatórios e documentos.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-lg font-semibold text-darkruby">Quanto tempo leva para abrir uma empresa?</h3>
+                        <i class="fas fa-chevron-down text-ruby transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        <p>O processo completo geralmente leva de 7 a 15 dias úteis, dependendo da agilidade dos órgãos públicos. Nós cuidamos de todo o processo enquanto você se concentra no seu negócio.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="mb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-lg font-semibold text-darkruby">Vocês emitem certificado digital?</h3>
+                        <i class="fas fa-chevron-down text-ruby transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        <p>Sim, somos parceiros de uma autoridade certificadora e facilitamos todo o processo de emissão e renovação do certificado digital para sua empresa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Chamado de Contato -->
+    <section class="py-16 bg-ruby text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para transformar sua contabilidade?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Entre em contato agora e descubra como podemos ajudar seu negócio a crescer com segurança e eficiência.</p>
+            <a href="#contact" class="bg-white hover:bg-primary text-ruby font-bold py-3 px-8 rounded-lg inline-block transition duration-300">Agendar Consulta</a>
+        </div>
+    </section>
+
+
+    <!-- Barra Inferior -->
+    <footer class="bg-darkruby text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="ruby-gem mr-4"></div>
+                        <span class="text-xl font-bold text-primary">Caetano Assessoria</span>
+                    </div>
+                    <p class="text-accent">Excelência em serviços contábeis com transparência e comprometimento.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-primary mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-accent hover:text-white transition duration-300">Início</a></li>
+                        <li><a href="#services" class="text-accent hover:text-white transition duration-300">Serviços</a></li>
+                        <li><a href="#about" class="text-accent hover:text-white transition duration-300">Quem somos</a></li>
+                        <li><a href="#contact" class="text-accent hover:text-white transition duration-300">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-primary mb-4">Serviços</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-accent hover:text-white transition duration-300">Contabilidade Fiscal</a></li>
+                        <li><a href="#services" class="text-accent hover:text-white transition duration-300">Departamento Pessoal</a></li>
+                        <li><a href="#services" class="text-accent hover:text-white transition duration-300">Abertura de Empresa</a></li>
+                        <li><a href="#services" class="text-accent hover:text-white transition duration-300">Consultoria Tributária</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-primary mb-4">Contato</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt text-accent mr-2"></i> <span class="text-accent">Rua Exemplo, 123 - Centro</span></li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt text-accent mr-2"></i> <span class="text-accent">(XX) XXXX-XXXX</span></li>
+                        <li class="flex items-center"><i class="fas fa-envelope text-accent mr-2"></i> <span class="text-accent">contato@caetanoassessoria.com.br</span></li>
+                    </ul>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="https://www.instagram.com/andressa.rcaetano?igsh=MXJ6NjN4ZTRta2tlaw==" class="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-darkruby hover:bg-primary transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-darkruby hover:bg-primary transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-accent">
+                <p>&copy; 2025 Caetano Assessoria. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Botão para o Topo -->
+    <button id="backToTop" class="fixed bottom-6 right-6 w-12 h-12 bg-ruby text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
