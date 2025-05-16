@@ -71,11 +71,11 @@
         });
         
         //Menu Mobile
-        const mobileMenuButton = document.querySelector('#mobile-menu-button');
-        const mobileMenu = document.querySelector('#mobile-menu');
+            const mobileMenuButton = document.querySelector('#mobile-menu-button');
+            const mobileMenu = document.querySelector('#mobile-menu');
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
         });
         
         // Initialize counters when scrolled into view
