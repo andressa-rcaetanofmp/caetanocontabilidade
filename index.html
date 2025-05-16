@@ -41,18 +41,22 @@
                     <a href="#contact" class="nav-link text-gray-700 hover:text-ruby font-medium">Contato</a>
                 </nav>
                 
+                <!-- Container com posição relativa para posicionamento absoluto funcionar -->
+            <div class="relative md:hidden">
                 <!-- Botão Mobile -->
-                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <button id="mobile-menu-button" class="focus:outline-none">
                     <i class="fas fa-bars text-2xl text-ruby"></i>
                 </button>
 
-                <!-- Menu Mobile -->
-                <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4">
-                    <a href="#home" class="nav-link text-gray-700 hover:text-ruby font-medium">Início</a>
-                    <a href="#services" class="nav-link text-gray-700 hover:text-ruby font-medium">Serviços</a>
-                    <a href="#about" class="nav-link text-gray-700 hover:text-ruby font-medium">Quem somos</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-ruby font-medium">Contato</a>
-                </nav>
+                <!-- Menu Mobile Flutuante -->
+                <div id="mobile-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-50 flex flex-col space-y-2 p-4">
+                     <a href="#home" class="nav-link text-gray-700 hover:text-ruby font-medium">Início</a>
+                      <a href="#services" class="nav-link text-gray-700 hover:text-ruby font-medium">Serviços</a>
+                     <a href="#about" class="nav-link text-gray-700 hover:text-ruby font-medium">Quem somos</a>
+                     <a href="#contact" class="nav-link text-gray-700 hover:text-ruby font-medium">Contato</a>
+                </div>
+            </div>
+
                 
             </div>
         </div>
